@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課程簡介｜休閒療癒學分學程專班(18學分)</title>
+  <style>
+
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfaf5;
+      color: #333;
+    }
+    header {
+      background-color: #f0e5da;
+      padding: 1em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #5a3e36;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    .course-image {
+      display: block;
+      margin: 0 auto 2em auto;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #814c2f;
+      font-size: 1.5rem;
+      margin-top: 1.5em;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: center;
+    }
+    th {
+      background-color: #f0e5da;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .indented-section p {
+      margin-left: -0.5em;
+      text-indent: -3em; /* 課名凸出來 */
+      padding-left: 3em;  /* 讓文字不撞左邊 */
+    }
+
+
+    .course-gallery {
+      padding: 2em 0;
+      background-color: #f9f9f9;
+    }
+
+    .course-gallery h2 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 1em;
+      color: #333;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+
+
+    /* 背景區塊設定 */
+    .course-content-with-bg {
+      position: relative;
+      background: url("images/8.jpg") center center / cover no-repeat;
+      padding: 4em 1em;
+      color: #333;
+      overflow: hidden;
+    }
+    .course-content-with-bg .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8); /* 調整透明度 */
+      z-index: 1;
+    }
+    .course-content-with-bg .content-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 圖集展示（七張） */
+    .course-gallery {
+      padding: 2em 0;
+      background-color: #f9f9f9;
+    }
+    .course-gallery h2 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 1em;
+      color: #333;
+    }
+    .gallery-grid.seven {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+    .gallery-grid.seven .gallery-item:nth-child(n+4) {
+      grid-column: span 1;
+    }
+    .gallery-grid.seven .gallery-item:nth-child(4) {
+      grid-column-start: 1;
+    }
+
+    /* 圖片設定 */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* 響應式排版 */
+    @media (max-width: 768px) {
+      .gallery-grid.seven {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid.seven {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    .gallery-grid.custom-seven {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    .gallery-grid.custom-seven .gallery-item {
+      flex: 0 0 calc(25% - 1em); /* 預設一列四張 */
+    }
+
+    .gallery-grid.custom-seven .gallery-item:nth-child(n+5) {
+      flex: 0 0 calc(33.333% - 1em); /* 後面改為一列三張 */
+    }
+
+    /* RWD：小螢幕自動調整 */
+    @media (max-width: 768px) {
+      .gallery-grid.custom-seven .gallery-item {
+        flex: 0 0 calc(50% - 1em);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid.custom-seven .gallery-item {
+        flex: 0 0 100%;
+      }
+    }
+
+
+
+    .page-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 1.5em 1em;
+      background-color: #f0e5da;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .page-nav a {
+      padding: 0.6em 1.2em;
+      background-color: #fff;
+      color: #5a3e36;
+      border: 2px solid #814c2f;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .page-nav a:hover {
+      background-color: #814c2f;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .page-nav a {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+
+    .page-nav a.active {
+      background-color: #814c2f;
+      color: #fff;
+      pointer-events: none; /* 不可點擊當前頁 */
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .page-nav a {
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>課程簡介｜休閒療癒學分學程專班(18學分)</h1>
+  </header>
+
+  <nav class="page-nav">
+    <a href="index.html" class="active">課程簡介</a>
+    <a href="teachers.html">專業師資</a>
+    <a href="classrooms.html">專業教室</a>
+    <a href="enroll.html">開課條件</a>
+  </nav>
+
+  <div class="container">
+    <img src="images/觀光系-休閒療癒學分學程專班.jpg" alt="課程主視覺" class="course-image">
+
+    <h2>一、課程目標</h2>
+    <p>
+      「學有所長」、「學有所獲」，也強調「終身學習」、「跨域整合」，透過「第三人生」學分學程，
+      將可以吸引除了原有的大學生以外的年紀別，作為發展第二專長，或是跨域多元學習的橋樑。
+    </p>
+
+    <h2>二、課程內容</h2>
+    <p>本學分學程規劃6門課，課程與學分總表，以及各課程內容分述如下。</p>
+    <table>
+      <tr><th>序號</th><th>課程名稱</th><th>學分數</th></tr>
+      <tr><td>1</td><td>飲料調製</td><td>4</td></tr>
+      <tr><td>2</td><td>說「觀光」，「走」「讀」文化</td><td>3</td></tr>
+      <tr><td>3</td><td>休閒與人生</td><td>3</td></tr>
+      <tr><td>4</td><td>銀髮慢旅程：西班牙語系國家的風情與故事</td><td>2</td></tr>
+      <tr><td>5</td><td>用味蕾旅行：西班牙文化與美味體驗</td><td>2</td></tr>
+      <tr><td>6</td><td>西語國度漫遊：銀髮族的文化與旅行指南</td><td>2</td></tr>
+    </table>
+
+    <section class="course-content-with-bg">
+      <div class="bg-overlay"></div>
+      <div class="content-inner">
+
+          <p>課程內容說明</p>
+          <div class="indented-section">
+            <p><strong>（一）飲料調製</strong> <br>
+            本課程著重於有關飲料之知識、飲調之基本專業知識及技術、安全與衛生知識及相關法令規定。規劃飲調品項，菜單，透過咖啡、果汁、調酒，酒精、非酒精飲料，小班教學、課程實務操作；包含「吧檯布置、前置作業、調製過程、善後處理」等飲料調製的飲品菜單設計、成本控制、行銷推廣等之具體成品。</p>
+            <p><strong>（二）說「觀光」，「走」「讀」文化</strong>  <br>
+            學習遊程規劃與設計之Know- How專業，涵養遊程規劃的專案設計與文化走讀的鑑別力，提升、促進觀光遊程產業的規劃、操作能力，也透過實境走讀、實務演練，「知」「行」合一，能說、能走，說風土、道人文，提升業界及個人遊程規劃設計的專業與能力。</p>
+            <p><strong>（三）休閒與人生</strong>  <br>
+            了解休閒與人生發展的關連性，從多元面向解讀休閒對人生階段的角色、影響；從政治、經濟、教育、性別、宗教等面向探討休閒社會的焦點，如大眾媒體、社群發展、環境永續、科技應用面向並探討休閒與人生議題為主軸，輔以討論問題來刺激思考休閒對人生的意義。</p>
+            <p><strong>（四）銀髮慢旅程：西班牙語系國家的風情與故事</strong>  <br>
+            設計適合銀髮族的西班牙的文化、藝術史課程，融入具西班牙民族特色的經典故事、風俗，輔佐以西班牙的世界文化遺產介紹，引領徜徉體會西班牙藝術大師的經典故事、與風情。</p>
+            <p><strong>（五）用味蕾旅行：西班牙文化與美味體驗</strong>  <br>
+            用味蕾體會「文化」美食，課程體驗西班牙燉飯、塔帕斯等，從體驗西班牙特色餐，也探討其飲食習慣的文化傳承、意涵；西班牙飲食特色，依地理環境，而有所不同。沿海地區，多海鮮入味；烹飪常伴佐橄欖油、葡萄酒；也大量引進原產自美洲的植物，如番茄、馬鈴薯，用於前菜、冷湯；又如：可可磨成粉，製「巧克力」。舌尖品評，與文化探源相輔相成。</p>
+            <p><strong>（六）西語國度漫遊：銀髮族的文化指南</strong>  <br>
+            課程設計融入「西班牙特色文化」於課堂體驗中；透過課程領隊帶領，一探弗拉明戈舞、吉他等對音樂世界的影響；有虛擬觀光，體驗西班牙傳統藝術建築、景點；跟隨專業領隊走訪『世界文化遺產』。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+<!-- 圖片展示區塊 -->
+<div class="course-gallery">
+  <h2>相關圖集</h2>
+  <div class="gallery-grid custom-seven">
+    <div class="gallery-item"><img src="images/1.jpg" alt="圖1"></div>
+    <div class="gallery-item"><img src="images/2.jpg" alt="圖2"></div>
+    <div class="gallery-item"><img src="images/3.jpg" alt="圖3"></div>
+    <div class="gallery-item"><img src="images/4.jpg" alt="圖4"></div>
+    <div class="gallery-item"><img src="images/5.jpg" alt="圖5"></div>
+    <div class="gallery-item"><img src="images/6.jpg" alt="圖6"></div>
+    <div class="gallery-item"><img src="images/7.jpg" alt="圖7"></div>
+  </div>
+</div>
+
+
+</body>
+</html>

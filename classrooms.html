@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>專業教室｜第三人生休閒療癒學分學程</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      line-height: 1.8;
+      background-color: #fdfaf5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f0e5da;
+      padding: 1em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #5a3e36;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    .classroom-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1.2em;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .classroom-card.horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1.5em;
+    }
+    .classroom-info {
+      flex: 1 1 300px;
+    }
+    .classroom-photo {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .classroom-photo img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 4px;
+      height: auto;
+    }
+    .classroom-photo.double {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .classroom-photo.double img {
+      max-width: 300px;
+    }
+    .classroom-card h2 {
+      color: #5a3e36;
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    .classroom-card ul {
+      padding-left: 1.2em;
+    }
+    .classroom-card li {
+      margin-bottom: 0.5em;
+    }
+    @media (max-width: 768px) {
+      .classroom-card.horizontal {
+        flex-direction: column;
+      }
+      .classroom-photo,
+      .classroom-photo.double {
+        flex-direction: column;
+        text-align: center;
+      }
+      .classroom-photo.double img {
+        max-width: 100%;
+      }
+    }
+    .classroom-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .classroom-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+
+
+
+      .page-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 1.5em 1em;
+      background-color: #f0e5da;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .page-nav a {
+      padding: 0.6em 1.2em;
+      background-color: #fff;
+      color: #5a3e36;
+      border: 2px solid #814c2f;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .page-nav a:hover {
+      background-color: #814c2f;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .page-nav a {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+
+    .page-nav a.active {
+      background-color: #814c2f;
+      color: #fff;
+      pointer-events: none; /* 不可點擊當前頁 */
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .page-nav a {
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>專業教室｜休閒療癒學分學程專班(18學分)</h1>
+  </header>
+
+
+  <nav class="page-nav">
+    <a href="index.html">課程簡介</a>
+    <a href="teachers.html">專業師資</a>
+    <a href="classrooms.html" class="active">專業教室</a>
+    <a href="enroll.html">開課條件</a>
+  </nav>
+
+
+  <div class="container">
+
+    <!-- 格502 單圖 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格 502 餐旅管理示範教室</h2>
+        <ul>
+          <li>可容納人數：30人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>會議桌4張、椅子30張</li>
+          <li>擴音設備：麥克風、CD 播放器</li>
+          <li>餐服中式、西式餐桌、示範教學單人床、雙人床</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/502.png" alt="格502教室照片">
+      </div>
+    </div>
+
+    <!-- 格504 雙圖 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格 504 飲料管理實驗室</h2>
+        <ul>
+          <li>可容納人數：60人</li>
+          <li>空調：冷氣機四台</li>
+          <li>擴音設備：麥克風、CD 播放器</li>
+          <li>上課桌椅、活動式調酒吧台12台、工作台、冷藏冰箱2台、三槽式流理台、熱水器、製冰機、展示酒櫃、各式吧台實務操作器具</li>
+        </ul>
+      </div>
+      <div class="classroom-photo double">
+        <img src="images/504-1.png" alt="格504教室照片1">
+        <img src="images/504-2.png" alt="格504教室照片2">
+      </div>
+    </div>
+
+    <!-- 你可以在此繼續貼上其他教室（512～614），照這個樣板複製修改即可 -->
+<!-- 格倫512 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 512 廚務管理示範教室</h2>
+        <ul>
+          <li>可容納人數：36人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>擴音設備：無線麥克風</li>
+          <li>上課椅附可掀式桌面36張、雙口快速爐、四口爐/附烤箱、麵粉工作台、排氣油煙罩、3L桌上型攪拌機、20L攪拌機、單水槽、電烤箱兼發酵箱/液晶顯示、置機台、櫥櫃工作台、工作台冷藏冰箱、洗手槽/感應式水龍頭、前台櫥櫃、反射鏡、錄影機、各式廚務實作器具</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/512.png" alt="格倫512教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫516 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 516 示範教室</h2>
+        <ul>
+          <li>可容納人數：48人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>擴音設備：無線麥克風</li>
+          <li>中式圓桌(附轉檯)4張、椅子48張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/516.png" alt="格倫516教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫518 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 518 廚務管理實驗室</h2>
+        <ul>
+          <li>可容納人數：40人</li>
+          <li>空調：冷氣機四台</li>
+          <li>擴音設備：無線麥克風</li>
+          <li>水槽工作台x8、工作台櫥櫃x8、麵粉工作台/附抽屜x8、3L桌上型攪拌機x8、雙口快速爐x8、四口爐/附烤箱x8、置機台/上架x8、排氣油煙罩/濾網式x8、20L攪拌機x4、電烤箱x9、發酵箱x1、中式、西式、烘焙廚務實作器具</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/518.png" alt="格倫518教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫602 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 602 台灣觀光發展研討室</h2>
+        <ul>
+          <li>可容納人數：40人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>擴音設備：無線麥克風</li>
+          <li>U型會議桌及椅子40張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/602.png" alt="格倫602教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫604 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 604 實習旅行社</h2>
+        <ul>
+          <li>可容納人數：20人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>擴音設備：無線麥克風</li>
+          <li>會議桌與椅子12張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo double">
+        <img src="images/604-1.png" alt="格604教室照片1">
+        <img src="images/604-2.png" alt="格604教室照片2">
+      </div>    </div>
+
+    <!-- 格倫606 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 606 學生實習研討室</h2>
+        <ul>
+          <li>可容納人數：12人</li>
+          <li>空調：冷氣機兩台</li>
+          <li>U型會議桌與椅子12張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/606.png" alt="格倫606教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫608 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 608 多功能專業教室</h2>
+        <ul>
+          <li>可容納人數：72人</li>
+          <li>空調：冷氣機四台</li>
+          <li>會議桌24張、椅子72張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/608.png" alt="格倫608教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫610 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 610 休閒遊憩規劃管理研討室</h2>
+        <ul>
+          <li>可容納人數：20人</li>
+          <li>空調：冷氣機一台</li>
+          <li>U型會議桌與椅子20張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/610.png" alt="格倫610教室照片">
+      </div>
+    </div>
+
+    <!-- 格倫614 -->
+    <div class="classroom-card horizontal">
+      <div class="classroom-info">
+        <h2>格倫 614 觀光產業研討室</h2>
+        <ul>
+          <li>可容納人數：20人</li>
+          <li>空調：冷氣機一台</li>
+          <li>U型會議桌與椅子20張</li>
+        </ul>
+      </div>
+      <div class="classroom-photo">
+        <img src="images/614.png" alt="格倫614教室照片">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
