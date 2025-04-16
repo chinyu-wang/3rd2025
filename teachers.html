@@ -121,6 +121,49 @@
     .page-nav a {
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     }
+
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1.5em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 1em;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 1em 0.5em;
+        font-size: 1rem;
+        line-height: 1.6;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;                  /* ✅ 強制單獨一行 */
+        font-weight: bold;
+        color: #5a3e36;
+        margin-bottom: 0.5em;            /* ✅ 空一點讓文字不撞 */
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -151,82 +194,82 @@
       </thead>
       <tbody>
         <tr>
-          <td>A</td>
-          <td>魏惠娟</td>
-          <td>前瞻因應人生100核心課程</td>
-          <td>2學分</td>
-          <td>專任</td>
-          <td>
+          <td data-label="講師類別：">A</td>
+          <td data-label="講師姓名：">魏惠娟</td>
+          <td data-label="課程名稱：">前瞻因應人生100核心課程</td>
+          <td data-label="學分／時數：">2學分</td>
+          <td data-label="專／兼任：">專任</td>
+          <td data-label="資歷與專長：">
             現職：國立中正大學教授<br>
             學歷：美國明尼蘇達大學教育政策與管理研究所博士<br>
             授課專長：成人教育方案規劃與管理、樂齡學習與人生設計
           </td>
-          <td>此必修2學分由本部委託國立中正大學提供統一線上課程，各校不需自行規劃，但需保留呈現此列。</td>
+          <td data-label="備註：">此必修2學分由本部委託國立中正大學提供統一線上課程，各校不需自行規劃，但需保留呈現此列。</td>
         </tr>
         <tr>
-          <td>A</td>
-          <td>許素鈴</td>
-          <td>飲料調製</td>
-          <td>4學分</td>
-          <td>專任</td>
-          <td>
+          <td data-label="講師類別：">A</td>
+          <td data-label="講師姓名：">許素鈴</td>
+          <td data-label="課程名稱：">飲料調製</td>
+          <td data-label="學分／時數：">4學分</td>
+          <td data-label="專／兼任：">專任</td>
+          <td data-label="資歷與專長：">
             現職：弘光科技大學餐旅管理系助理教授級專業技術人員<br>
             專長：飲務管理與實務、台灣茶文化與實務、養生蔬果飲實務、酒類知識與雞尾酒實務、咖啡與茶飲實務、咖啡鑑賞與運用
 
           </td>
-          <td>實作課程</td>
+          <td data-label="備註：">實作課程</td>
         </tr>
         <tr>
-          <td>B</td>
-          <td>羅偉彰</td>
-          <td>說「觀光」，「走」「讀」文化</td>
-          <td>3學分</td>
-          <td>兼任</td>
-          <td>
+          <td data-label="講師類別：">B</td>
+          <td data-label="講師姓名：">羅偉彰</td>
+          <td data-label="課程名稱：">說「觀光」，「走」「讀」文化</td>
+          <td data-label="學分／時數：">3學分</td>
+          <td data-label="專／兼任：">兼任</td>
+          <td data-label="資歷與專長：">
             現職：旅行空間旅行社總經理（負責人）<br>
             學歷：靜宜大學觀光事業學系（學士及碩士）<br>
             授課專長：國外領隊實務、旅行社經營管理、行程規劃設計、旅遊服務流程實務
 
           </td>
-          <td></td>
+          <td data-label="備註："></td>
         </tr>
         <tr>
-          <td>A</td>
-          <td>葉美智</td>
-          <td>休閒與人生</td>
-          <td>3學分</td>
-          <td>專任</td>
-          <td>
+          <td data-label="講師類別：">A</td>
+          <td data-label="講師姓名：">葉美智</td>
+          <td data-label="課程名稱：">休閒與人生</td>
+          <td data-label="學分／時數：">3學分</td>
+          <td data-label="專／兼任：">專任</td>
+          <td data-label="資歷與專長：">
             現職：靜宜大學觀光事業學系副教授<br>
             學歷：中興大學森林學系博士<br>
             授課專長：觀光資源規劃與經營管理、社區保育及生態觀光
 
 
           </td>
-          <td></td>
+          <td data-label="備註："></td>
         </tr>
         <tr>
-          <td>A</td>
-          <td>林玉葉</td>
-          <td>銀髮慢旅程：西班牙語系國家的風情與故事</td>
-          <td>2學分</td>
-          <td>專任</td>
-          <td>
+          <td data-label="講師類別：">A</td>
+          <td data-label="講師姓名：">林玉葉</td>
+          <td data-label="課程名稱：">銀髮慢旅程：西班牙語系國家的風情與故事</td>
+          <td data-label="學分／時數：">2學分</td>
+          <td data-label="專／兼任：">專任</td>
+          <td data-label="資歷與專長：">
             現職：靜宜大學西班牙語文學系副教授<br>
             學歷：西班牙巴雅多里大學西班牙文學理論暨比較文學博士<br>
             授課專長：西班牙文學、西班牙短篇小說、西班牙語教學、企業管理
 
 
           </td>
-          <td>配搭DIY手做</td>
+          <td data-label="備註：">配搭DIY手做</td>
         </tr>
         <tr>
-          <td>A</td>
-          <td>林姿如</td>
-          <td>用味蕾旅行：西班牙文化與美味體驗</td>
-          <td>2學分</td>
-          <td>專任</td>
-          <td>
+          <td data-label="講師類別：">A</td>
+          <td data-label="講師姓名：">林姿如</td>
+          <td data-label="課程名稱：">用味蕾旅行：西班牙文化與美味體驗</td>
+          <td data-label="學分／時數：">2學分</td>
+          <td data-label="專／兼任：">專任</td>
+          <td data-label="資歷與專長：">
             現職：靜宜大學西班牙語文學系副教授<br>
             學歷：西班牙阿爾卡拉大學應用語言學博士<br>
             授課專長：西班牙語教學法、比較語言學、錯誤分析
@@ -234,21 +277,21 @@
 
 
           </td>
-          <td>體驗地中海飲食DIY</td>
+          <td data-label="備註：">體驗地中海飲食DIY</td>
         </tr>
         <tr>
-          <td>B</td>
-          <td>王定國</td>
-          <td>西語國度漫遊：銀髮族的文化與旅行指南</td>
-          <td>2學分</td>
-          <td>兼任</td>
-          <td>
+          <td data-label="講師類別：">B</td>
+          <td data-label="講師姓名：">王定國</td>
+          <td data-label="課程名稱：">西語國度漫遊：銀髮族的文化與旅行指南</td>
+          <td data-label="學分／時數：">2學分</td>
+          <td data-label="專／兼任：">兼任</td>
+          <td data-label="資歷與專長：">
             現職：永勁旅行社股份有限公司領隊<br>
             學歷：靜宜大學西班牙語文學系畢業<br>
             授課專長：觀光西文、旅遊規劃
 
           </td>
-          <td></td>
+          <td data-label="備註："></td>
         </tr>
       </tbody>
     </table>
