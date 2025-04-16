@@ -126,7 +126,7 @@
     @media (max-width: 768px) {
       table, thead, tbody, th, td, tr {
         display: block;
-        width: 100%;
+        width: 98%;
       }
 
       thead {
@@ -143,21 +143,21 @@
       }
 
       td {
+        display: block;
         border: none;
         border-bottom: 1px solid #eee;
-        padding: 1em 0.5em;
         font-size: 1rem;
         line-height: 1.6;
-        position: relative;
+        padding: 1.2em 1.2em; /* ✅ 左右保留邊界 */
+        text-align: left;
       }
 
       td::before {
+        display: block;
         content: attr(data-label);
-        display: block;                  /* ✅ 強制單獨一行 */
         font-weight: bold;
         color: #5a3e36;
-        margin-bottom: 0.5em;            /* ✅ 空一點讓文字不撞 */
-        font-size: 1rem;
+        margin-bottom: 0.5em;
         line-height: 1.5;
       }
     }
