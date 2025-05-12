@@ -179,5 +179,16 @@
 
     <p>後續學習可以延續本系課程課程與教師專長共分3（專業領域）+2（行銷/管理+資訊）領域，分別為餐旅管理/旅遊事業經營管理/休閒事業管理三個專業。</p>
   </div>
+
+  <script>
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ frameHeight: height }, '*');
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
 </body>
 </html>
